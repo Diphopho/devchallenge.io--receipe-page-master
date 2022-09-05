@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  --size: 36px;
+  padding: 32px 12px 0 12px;
+}
+
+h1.title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.hero-text-container {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin: 12px 0;
+}
+
+p.hero-paragraph {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4f4f4f;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+}
+
+.rate {
+  max-width: 131px;
+  max-height: 26px;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* justify-items: center; */
+  align-items: center;
+  /* column-gap: 5px; */
+}
+
+.rate > .material-icons {
+  grid-column: 1 / 1;
+  grid-row: 1 / span 2;
+  color: #f2994a;
+  font-size: 17px;
+}
+
+.rate > .subtitle {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.rate > .details {
+  font-size: 10px;
+  font-weight: 500;
+  color: #f2994a;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20.75px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.card > .material-icons {
+  grid-row: 1 / span 2;
+  font-size: 17px;
+}
+
+.card > .title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 8px;
+  color: #bdbdbd;
+}
+
+.card > .detail {
+  font-size: 10px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.ingredients {
+  margin-top: 30.25px;
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+}
+
+.ingredients-left .title,
+.ingredients-left .part .subtitle {
+  font-family: "Playfair Display", sans-serif;
+}
+
+.ingredients-left .title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.ingredients-left .part .subtitle {
+  margin-top: 13px;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.ingredients-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20.75px;
+}
+
+.rate {
+  grid-column: 1 / span 3;
+}
+
+.form-container {
+  margin-top: 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.form-control {
+  display: grid;
+  grid-template-columns: 30px 320px;
+  grid-template-rows: 1fr;
+  align-items: start;
+}
+
+input[type="checkbox"] {
+  width: 21px;
+  height: 21px;
+  grid-column: 1 / 1;
+}
+
+.form-control > p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+  line-height: 25px;
+}
+
+.instruction {
+  margin-top: 30px;
+  /* padding-left: 12px; */
+}
+
+.instruction h2.title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.instruction-list {
+  list-style: none;
+  margin-top: 28px;
+  padding-left: calc(15px + var(--size));
+}
+
+.instruction-list li {
+  margin-bottom: 27px;
+  counter-increment: myCounter;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  /* padding-left: 15px; */
+}
+
+.instruction-list li::before {
+  content: counter(myCounter);
+  width: var(--size);
+  height: var(--size);
+  background-color: #f2994a;
+  border-radius: 6px;
+  color: white;
+  position: absolute;
+  font-family: "Playfair Display";
+  font-size: 24px;
+  display: flex;
+  top: 0;
+  left: calc(-1 * var(--size) - 15px);
+  justify-content: center;
+  align-items: baseline;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.source {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #bdbdbd;
+  display: inline-block;
+}
+
+footer {
+  color: #828282;
+  text-align: center;
+  margin-top: 129px;
+  padding: 1rem;
+  font-size: 14px;
+}
+
+footer a {
+  font-weight: 700;
+  color: #828282;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 67.29%;
+  }
+
+  h1.title {
+    font-size: 48px;
+    line-height: 63.98px;
+  }
+
+  p.hero-paragraph {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .ingredients {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .ingredients-left .title {
+    font-size: 24px;
+  }
+
+  .ingredients-left .part .subtitle {
+    font-size: 18px;
+  }
+
+  .form-control p {
+    font-size: 16px;
+  }
+
+  .ingredients-right {
+    width: 216px;
+    height: 367px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    justify-content: space-around;
+  }
+
+  .ingredients-right .rate {
+    grid-template-columns: 45px 1fr;
+  }
+
+  .ingredients-right .rate .material-icons {
+    font-size: 34px;
+  }
+
+  .ingredients-right .rate .details {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .ingredients-right .rate .subtitle {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .card {
+    grid-template-columns: 45px 1fr;
+    column-gap: 13px;
+  }
+
+  .card > .material-icons {
+    font-size: 34px;
+  }
+
+  .card .title {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .card .detail {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .hero-paragraph {
+    max-width: 592px;
+  }
+
+  .instruction {
+    max-width: 60%;
+  }
+
+  .instruction h2.title {
+    font-size: 24px;
+  }
+
+  .source {
+    font-size: 16px;
+  }
+}
